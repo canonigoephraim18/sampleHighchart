@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highcharts API sample</title>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+</head>
+<body>
+    <div id="container" style="width:100%; height:400px;"></div>
+   
+</body>
+
+<script>
+ 
+
+document.addEventListener('DOMContentLoaded', function () {
+        const chart = Highcharts.chart('container', {
+            chart: {
+                type: 'column'
+            },
+            title: {
+                text: 'Philippine Peso per 1 US Dollar Monthly Average year 2020'
+            },
+            xAxis: {
+                categories: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+            },
+            yAxis: {
+                title: {
+                    text: 'Peso Value'
+                }
+            },
+            tooltip: {
+            valueDecimals: 2,
+            valuePrefix: '₱',
+            valueSuffix: 'PHP'
+        },
+            series: [{
+                name: 'Value',
+                data: [50.84, 50.81, 51.01, 50.71, 50.60, 50.09, 49.43, 48.81, 48.52, 48.50, 48.26, 48.09]
+            }]
+        });
+});
+
+
+</script>
+
+<script src="/HighchartsAPI/fullscreen.js"></script>
+</html>
